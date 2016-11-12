@@ -62,7 +62,7 @@ int main(int argc, char* argv[])
 
 	if(create == 1)
 	{
-		memset(addr, sizeof(CShareData), 0);
+		memset(addr, 0, sizeof(CShareData));
 		if(sem_init((sem_t*)addr, 1, 1) < 0 )
 		{
 			perror("sem_init ");
